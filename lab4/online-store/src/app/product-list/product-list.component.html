@@ -1,0 +1,28 @@
+<h2>Телефоны</h2>
+
+<div *ngFor="let product of products">
+    <img [src]="product.imgURL" alt="Картина продукты">
+    <h3>
+        <a [title]="product.name + ' детали'">
+            {{product.name}}
+        </a>
+    </h3>
+
+
+    <p>Описание: {{product.description}}</p>
+    <p>Рейтинг: {{product.rating}} / 5</p>
+    <button type="button" class="open" (click)="open(product)">
+        Страница в Каспи
+    </button>
+
+    <button type="button" class="share" (click)="share(product)">
+        Поделиться
+    </button>
+
+
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
