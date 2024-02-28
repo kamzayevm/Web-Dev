@@ -38,4 +38,7 @@ todoList.addEventListener('click', function(event) {
         const todoItem = event.target.parentElement;
         todoList.removeChild(todoItem);
     }
-});
+})
+
+
+
