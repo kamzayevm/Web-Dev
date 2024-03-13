@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 20px;
+  background-color: #1976d2;;
+}
+.header a {
+  color: rgb(255, 255, 255);
+}
+
+.header h1 {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+a {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}

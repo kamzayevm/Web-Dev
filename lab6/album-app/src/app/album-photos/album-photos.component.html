@@ -1,0 +1,12 @@
+<div class="photo-container">
+    <h1>Albums List</h1>
+    <button class="return-btn" [routerLink]="['/albums', albumId]">Return back</button>
+    <div class="photos-container">
+        <div *ngFor="let photo of photos" class="photos-item">
+                    <h2>Title: {{ photo.title }}</h2>
+                    <h3>Album ID: {{ photo.albumId }}</h3>
+                    <h3>Photo ID: {{ photo.id }}</h3>
+                    <img class="photo-img" src={{photo.url}} alt="photo">
+        </div>
+    </div>
+</div>

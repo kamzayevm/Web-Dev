@@ -13,8 +13,15 @@ export class ProductPage3Component {
   share(product: Product){
     window.open(`https://t.me/share/url?url=${encodeURIComponent(product.link)}`);
   }
-  likeButtonClick(index:number) {
-    this.products[index].numberOfLikes++;
+  likedProducts: boolean[] = [];
+
+  toggleLike(index: number) {
+    if (this.likedProducts[index]) {
+      this.products[index].numberOfLikes--; // Уменьшаем количество лайков, если кнопка была уже нажата
+    } else {
+      this.products[index].numberOfLikes++; // Увеличиваем количество лайков, если кнопка была не нажата
+    }
+    this.likedProducts[index] = !this.likedProducts[index]; // Изменяем состояние кнопки лайка
   }
   deleteButton(index:number){
     this.products.splice(index,1)

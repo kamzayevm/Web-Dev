@@ -1,0 +1,83 @@
+.album-container h1 {
+    margin-left: 40px;
+    font-size: 50px;
+}
+.albums-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+.albums-container div{
+    width: 350px;
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    margin: 10px; 
+    text-align: center; 
+}
+
+.a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.remove-btn {
+    margin-bottom: 10px;
+    background-color: #f44336;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+.save-btn {
+    margin-top: 10px;
+    background-color: #4caf50;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+.add-btn {
+    background-color: #1976d2;
+    margin-left: 20px;
+}
+
+.add-btn:hover {
+    background-color: #135ba2;
+}
+
+.close-btn {
+    background-color: #f44336;
+    margin-left: 20px;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+.adding form {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.adding label {
+    font-size: 16px;
+}
+
+.adding input {
+    width: 50%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}

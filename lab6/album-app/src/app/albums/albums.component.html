@@ -1,0 +1,24 @@
+<div class="album-container">
+    <h1>Albums List</h1>
+    <button class="add-btn" (click)="toggleInputs()" *ngIf="showInputs == false">Add album</button>
+    <button class="close-btn" (click)="toggleInputs()" *ngIf="showInputs">Close</button>
+    <div class="adding" *ngIf="showInputs">
+        <form (ngSubmit)="addAlbum()" #form="ngForm">
+            <label for="text">Add new album</label><br>
+            <input type="number" id="text" placeholder="User ID" name="userId" [(ngModel)]="newUserId"><br>
+            <input type="number" id="text" placeholder="Album ID" name="id" [(ngModel)]="newId"><br>
+            <input type="text" id="text" placeholder="Title" name="title" [(ngModel)]="newTitle"><br>
+            <button class="save-btn" type="submit">Save!</button>
+        </form>
+    </div>
+    <div class="albums-container">
+        <div *ngFor="let album of albums" class="albums-item">
+            <a [title]="'album: ' + album.id + ' details'" [routerLink]="['/albums', album.id]">
+                    <h2>Title: {{ album.title }}</h2>
+                    <h3>User ID: {{ album.userId }}</h3>
+                    <h3>Album ID: {{ album.id }}</h3>
+                </a>
+                    <button class="remove-btn" (click)="removeAlbum(album.id)">Remove</button>
+        </div>
+    </div>
+</div>
